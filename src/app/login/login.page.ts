@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router, NavigationExtras } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
 
@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
     const passwordPattern = /^(?=.*[A-Z])(?=.*\d{4,})(?=.*[a-zA-Z]{3,}).{8,}$/;
     if (!passwordPattern.test(this.password)) {
       this.passwordError = 'La contraseña debe contener al menos 4 números, 3 caracteres y 1 mayúscula.';
-    } else if (this.email === 'millaray@gmail.com' && this.password === 'Espo1234') {
+    } else if (this.email === 'benja@gmail.com' && this.password === 'Benj1234') {
       const navigationExtras: NavigationExtras = {
         state: {
           email: this.email
