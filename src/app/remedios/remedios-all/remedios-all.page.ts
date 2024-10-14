@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Clremedios } from '../models/CLremedios';
 
 @Component({
   selector: 'app-remedios-all',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./remedios-all.page.scss'],
 })
 export class RemediosAllPage implements OnInit {
-
+  msgError = ""
+  buttonEliminarDisabled = false
+  buttonLeerDisabled = false
+  buttonActualizarDisabled = false
+  buttonCrearDisabled = false
+  producto: Clremedios = { id: 1, nombre: '', descripcion: '', dosis: '' };;
   constructor() { }
 
   ngOnInit() {
   }
+  public id: string = '';
+
+
+  leer() {}
+  eliminar() { }
+  grabar() { }
+  actualizar() { }
+  grabarActualizarAutomatico() { }
 
 }

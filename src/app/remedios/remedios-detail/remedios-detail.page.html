@@ -11,3 +11,28 @@
     </ion-toolbar>
   </ion-header>
 </ion-content>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{producto.nombre}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <p>Precio : </p>
+        <p>{{remedios.nombre}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Descripción : </p>
+        <p>{{remedios.descripcion}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Dosis : </p>
+        <p>{{remedios.dosis}}</p>
+      </ion-item>
+      <ion-button type="button" shape="round" color="primary" expand="block" href="/remedios-edit/{{remedios.id}}">Editar</ion-button>
+      <ion-button type="button" shape="round" color="danger" expand="block" (click)="delete(remedios.id)">Eliminar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -4,7 +4,7 @@ export class Clremedios {
     id: number;
     nombre: string;
     descripcion: string;
-    dosis: number;
+    dosis: string;
     // si no Inicializo los valores, da Error
       constructor(obj: any){
           this.id = obj && obj.id || null

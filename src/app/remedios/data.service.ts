@@ -68,8 +68,8 @@ export class DataService {
         catchError(this.handleError<Clremedios>('deleteProduct'))
       );
   }
-  updateProduct(id: number, remedio: Clremedios): Observable<Clremedios> {
-    return this.http.put<Clremedios>(apiUrl + "/" + id, remedio, httpOptions)
+  updateRemedios(id: number, remedios: Clremedios): Observable<Clremedios> {
+    return this.http.put<Clremedios>(apiUrl + "/" + id, remedios, httpOptions)
       .pipe(
         tap(_ => console.log('updated product id=${id}')),
         catchError(this.handleError<any>('updateProduct'))
