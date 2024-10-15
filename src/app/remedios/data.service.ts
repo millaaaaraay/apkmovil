@@ -49,15 +49,16 @@ export class DataService {
       );
   }
   //obtenemos remedio por id
-  getRemedio(id : number): Observable<Clremedios[]> {
-    console.log("getProducts ()",id);
-    return this.http.get<Clremedios[]>(apiUrl+"/remedios"+"/"+id)
+  getRemedio(id: number): Observable<Clremedios> {
+    //const url = '${apiUrl}/${id}';
+    //return this.http.get<Producto>(url).pipe(
+    console.log("getProduct ID:" + id);
+    return this.http.get<Clremedios>(apiUrl + "/" + id)
       .pipe(
-        tap(heroes => console.log('fetched products')),
-        catchError(this.handleError('getProducts', []))
+        tap(_ => console.log('fetched product id=${id}')),
+        catchError(this.handleError<Clremedios>('getProduct id=${id}'))
       );
   }
-
   
   deleteRemedio(id: number): Observable<Clremedios> {
     //const url = '${apiUrl}/${id}';
@@ -68,6 +69,7 @@ export class DataService {
         catchError(this.handleError<Clremedios>('deleteProduct'))
       );
   }
+
   updateRemedios(id: number, remedios: Clremedios): Observable<Clremedios> {
     return this.http.put<Clremedios>(apiUrl + "/" + id, remedios, httpOptions)
       .pipe(

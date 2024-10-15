@@ -12,7 +12,10 @@ import { Clremedios } from '../models/CLremedios';
 })
 export class RemediosDetailPage implements OnInit {
 
-  remedios: Clremedios[]=[] ; //CONVERTIDO EN ARRAY
+  //remedios: Clremedios[]=[] ; //CONVERTIDO EN ARRAY
+  remedios: Clremedios = { id: 1, nombre: '', descripcion: '', dosis: ''};
+  //remedios: Clremedios[] = Clremedios [] 
+  id: any = '';
 
   constructor(
     public restApi: DataService
