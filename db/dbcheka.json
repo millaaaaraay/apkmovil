@@ -10,8 +10,8 @@
     ],
     "usuarios": [
       { "id": "benja@gmail.com",
-      "first_name":"benjamin", 
-      "last_name": "contreras", 
+      "nombre":"benjamin", 
+      "apellido": "contreras", 
       "email": "benja@gmail.com" ,
       "clave":"112233"}
     ]
