@@ -60,7 +60,7 @@ export class DataService {
       );
   }
   
-  deleteRemedio(id: number): Observable<Clremedios> {
+  deleteRemedios(id: number): Observable<Clremedios> {
     //const url = '${apiUrl}/${id}';
     //return this.http.delete<Producto>(url, httpOptions).pipe(
     return this.http.delete<Clremedios>(apiUrl + "/" + id, httpOptions)

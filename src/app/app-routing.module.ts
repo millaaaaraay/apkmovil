@@ -22,18 +22,13 @@ const routes: Routes = [
   {
     path: 'index',
     loadChildren: () => import('./index/index.module').then( m => m.IndexPageModule)
-  },  {
-    path: 'remedios',
-    loadChildren: () => import('./remedios/remedios.module').then( m => m.RemediosPageModule)
   },
+
   {
     path: 'remedios-add',
     loadChildren: () => import('./remedios/remedios-add/remedios-add.module').then( m => m.RemediosAddPageModule)
   },
-  {
-    path: 'remedios-delete',
-    loadChildren: () => import('./remedios/remedios-delete/remedios-delete.module').then( m => m.RemediosDeletePageModule)
-  },
+
   {
     path: 'remedios-all',
     loadChildren: () => import('./remedios/remedios-all/remedios-all.module').then( m => m.RemediosAllPageModule)

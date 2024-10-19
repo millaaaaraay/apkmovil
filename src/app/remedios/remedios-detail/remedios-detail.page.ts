@@ -84,7 +84,7 @@ export class RemediosDetailPage implements OnInit {
       message: 'Loading...'
     });
     await loading.present();
-    await this.restApi.deleteRemedio(id)
+    await this.restApi.deleteRemedios(id)
       .subscribe({
         next: (res) => {
           console.log("Error DetailProduct Página", res);
